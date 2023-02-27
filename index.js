@@ -112,4 +112,14 @@ function animationThree() {
 
 }
 
+function animationFour() {
+    let div = document.createElement('div')
+    div.classList.add('animationFour')
+    wrapper.append(div)
+
+    setTimeout(() => {
+        div.classList.remove('animationFour')
+    }, 3000)
+}
+
 startUp()
