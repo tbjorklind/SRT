@@ -1,0 +1,24 @@
+body {
+  margin: 0;
+}
+
+.wrapper {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.animationZero {
+  height: 100px;
+  width: 100px;
+  background-color: rgb(195, 148, 176);
+  border-radius: 50%;
+  transition: width 0.5s ease, height 0.5s ease;
+}
+
+.changeZero {
+    width: 100vh;
+    height: 100vh;
+}
