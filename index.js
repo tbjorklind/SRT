@@ -72,4 +72,12 @@ function animationOne() {
         div.classList.remove('animationOne')
     }, 2000)
 }
+
+function animationTwo() {
+    let div = document.createElement('div')
+    div.classList.add('animationTwo')
+    wrapper.append(div)
+}
+
+
 startUp()

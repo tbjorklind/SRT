@@ -1,48 +1,82 @@
 body {
-    margin: 0;
+  margin: 0;
 }
 
 .wrapper {
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .animationZero {
-    height: 100px;
-    width: 100px;
-    background-color: rgb(195, 148, 176);
-    border-radius: 50%;
-    transition: width 0.5s ease, height 0.5s ease;
+  height: 100px;
+  width: 100px;
+  background-color: rgb(195, 148, 176);
+  border-radius: 50%;
+  transition: width 0.5s ease, height 0.5s ease;
 }
 
 .changeZero {
-    width: 100vh;
-    height: 100vh;
+  width: 100vh;
+  height: 100vh;
 }
 
 .animationOne {
-    --r1: 154%;
-    --r2: 68.5%;
-    width: 100vw;
-    height: 100vh;
-    background: radial-gradient(var(--r1) var(--r2) at top, #0000 79.5%, #a4c6e0 80%), radial-gradient(var(--r1) var(--r2) at bottom, #a4c6e0 79.5%, #0000 80%), radial-gradient(var(--r1) var(--r2) at top, #0000 79.5%, #a4c6e0 80%);
-    background-size: 50.5% 220%;
-    background-position: -100% 0%, 0% 0%, 100% 0%;
-    background-repeat: no-repeat;
-    animation: animationOne 2s infinite linear;
+  --r1: 154%;
+  --r2: 68.5%;
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(
+      var(--r1) var(--r2) at top,
+      #0000 79.5%,
+      #a4c6e0 80%
+    ),
+    radial-gradient(var(--r1) var(--r2) at bottom, #a4c6e0 79.5%, #0000 80%),
+    radial-gradient(var(--r1) var(--r2) at top, #0000 79.5%, #a4c6e0 80%);
+  background-size: 50.5% 220%;
+  background-position: -100% 0%, 0% 0%, 100% 0%;
+  background-repeat: no-repeat;
+  animation: animationOne 2s infinite linear;
 }
 
 @keyframes animationOne {
-    33% {
-        background-position: 0% 33%, 100% 33%, 200% 33%
-    }
-    66% {
-        background-position: -100% 66%, 0% 66%, 100% 66%
-    }
-    100% {
-        background-position: 0% 100%, 100% 100%, 200% 100%
-    }
+  33% {
+    background-position: 0% 33%, 100% 33%, 200% 33%;
+  }
+  66% {
+    background-position: -100% 66%, 0% 66%, 100% 66%;
+  }
+  100% {
+    background-position: 0% 100%, 100% 100%, 200% 100%;
+  }
+}
+
+.animationTwo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  padding: 1px;
+  background: conic-gradient(#0000 10%, #faa303) content-box;
+
+  /* -webkit-mask: repeating-conic-gradient(
+      #0000 0deg,
+      #0000 1deg 20deg,
+      #0000 21deg 36deg
+    ),
+    radial-gradient(
+      farthest-side,
+      #0000 calc(100% - 9px),
+      #0000 calc(100% - 8px)
+    ); */
+  /* -webkit-mask-composite: destination-in;
+  mask-composite: intersect; */
+  animation: animationTwo 1s infinite steps(40);
+}
+
+@keyframes animationTwo {
+  to {
+    transform: rotate(1turn);
+  }
 }
