@@ -16,6 +16,7 @@ function keyUp(event) {
             break
         case 1:
             animationOne()
+            playAudioOne()
             break
         case 2:
             animationTwo()
@@ -28,9 +29,11 @@ function keyUp(event) {
             break
         case 5:
             animationFive()
+            playAudioFive()
             break
         case 6:
             animationSix()
+            playAudioSix()
             break
         case 7:
             animationSeven()
@@ -77,6 +80,15 @@ function animationOne() {
     setTimeout(() => {
         div.remove();
     }, 2000)
+}
+
+function playAudioOne(){
+    var x = document.getElementById("audioOne")
+    x.play();
+
+    setTimeout(() =>{
+        x.pause()
+    }, 2200)
 }
 
 function animationTwo() {
@@ -152,6 +164,15 @@ function animationFive() {
 
 }
 
+function playAudioFive(){
+    var x = document.getElementById("audioFive")
+    x.play();
+
+    setTimeout(() =>{
+        x.pause()
+    }, 3000)
+}
+
 function animationSix() {
     let div = document.createElement("div");
     div.classList.add("animationSix")
@@ -171,8 +192,16 @@ function animationSix() {
     setTimeout(() => {
         div.remove();
     }, 3000)
-
-
 }
+
+function playAudioSix(){
+    var x = document.getElementById("audioSix")
+    x.play();
+
+    setTimeout(() =>{
+        x.pause()
+    }, 3000)
+}
+
 
 startUp()
