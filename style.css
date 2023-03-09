@@ -282,7 +282,7 @@ body {
     animation-delay: .3s;
 }
 
-.animationSix{
+.animationSix {
     width: 100vw;
     height: 100vh;
     position: relative;
@@ -293,14 +293,14 @@ body {
     background-color: #22283100;
 }
 
-.circleSix{
+.circleSix {
     width: 500px;
     height: 500px;
     background-color: #00adb5;
     border-radius: 50%;
     animation-name: bouncing;
     animation-duration: 0.5s;
-    animation-timing-function: cubic-bezier(0.280,0.840,0.420,1);
+    animation-timing-function: cubic-bezier(0.280, 0.840, 0.420, 1);
     animation-iteration-count: infinite;
     position: relative;
     left: -60px;
@@ -308,31 +308,31 @@ body {
     transition-delay: 0;
 }
 
-@keyframes bouncing{
-    0%{
-        transform: scale(1,1) translateY(0);
+@keyframes bouncing {
+    0% {
+        transform: scale(1, 1) translateY(0);
     }
-    10%{
+    10% {
         transform: scale(1.1, 0.9) translateY(0);
     }
-    30%{
+    30% {
         transform: scale(.9, 1.1) translateY(-100px);
     }
-    48%{
+    48% {
         transform: scale(1.05, .95) translateY(0);
     }
-    55%{
+    55% {
         transform: scale(0.95, 1.05) translateY(-15px);
     }
-    64%{
-        transform: scale(1,1) translateY(0);
+    64% {
+        transform: scale(1, 1) translateY(0);
     }
-    100%{
-        transform: scale(1,1) translateY(0);
+    100% {
+        transform: scale(1, 1) translateY(0);
     }
 }
 
-.animationSeven{
+.animationSeven {
     padding: 0;
     margin: 0;
     display: grid;
@@ -340,7 +340,7 @@ body {
     min-height: 100vh;
 }
 
-.boxSeven{
+.boxSeven {
     position: relative;
     width: 700px;
     height: 700px;
@@ -350,17 +350,16 @@ body {
     overflow: hidden;
 }
 
-.boxSeven::before{
+.boxSeven::before {
     content: '';
     position: absolute;
     width: 500px;
     height: 500px;
     background: conic-gradient(transparent, transparent, transparent, #00ffad);
     animation: rotate 1s linear infinite;
-   
 }
 
-.boxSeven::after{
+.boxSeven::after {
     content: '';
     position: absolute;
     width: 500px;
@@ -370,63 +369,171 @@ body {
     background: conic-gradient(transparent, transparent, transparent, #00adb5);
 }
 
-@keyframes rotate{
-    0%{
+@keyframes rotate {
+    0% {
         transform: rotate(0deg);
     }
-    100%{
+    100% {
         transform: rotate(360deg);
     }
 }
 
-.animationEight{
+.animationEight {
     position: absolute;
     width: 100vw;
     height: 100vh;
     position: relative;
 }
 
-.box8{
+.box8 {
     position: absolute;
     animation: eight 2s infinite alternate linear;
-
 }
 
-@keyframes eight{
-    0%{
+@keyframes eight {
+    0% {
         background-color: #ee6055;
         left: 0%;
         top: 0%;
         width: 10vw;
         height: 10vh;
     }
-    25%{
+    25% {
         background-color: #eec355;
         left: 25%;
         top: 25%;
         width: 20vw;
         height: 20vh;
     }
-    50%{
+    50% {
         background-color: #8afe76;
         left: 50%;
         top: 50%;
         width: 40vw;
         height: 40vh;
     }
-    75%{
+    75% {
         background-color: #55d2ee;
         left: 75%;
         top: 75%;
         width: 60vw;
         height: 60vh;
     }
-    100%{
+    100% {
         background-color: #ee55ee;
         left: 100%;
         top: 100%;
         width: 80vw;
         height: 80vh;
+    }
+}
 
+.loading {
+    width: 120px;
+    height: 120px;
+    position: relative;
+    margin: 150px auto;
+    background-color: white;
+    animation: spin 2s linear infinite;
+    animation-direction: reverse;
+}
+
+.shape {
+    display: block;
+    position: absolute;
+    height: 20px;
+    width: 40px;
+    background-color: white;
+    mix-blend-mode: exclusion;
+    -webkit-backface-visibility: visible;
+    backface-visibility: visible;
+}
+
+.shape.shape-1 {
+    animation: spin1 2s ease-in-out infinite;
+    animation-fill-mode: forwards;
+}
+
+.shape.shape-2 {
+    animation: spin2 2s ease-in-out infinite;
+    animation-fill-mode: forwards;
+}
+
+.shape.shape-3 {
+    animation: spin3 2s ease-in-out infinite;
+    animation-fill-mode: forwards;
+}
+
+.shape.shape-4 {
+    animation: spin4 2s ease-in-out infinite;
+    animation-fill-mode: forwards;
+}
+
+.shape.shape-1 {
+    top: 20px;
+    left: 40px;
+}
+
+.shape.shape-2 {
+    right: 20px;
+    top: 40px;
+    width: 20px;
+    height: 40px;
+}
+
+.shape.shape-3 {
+    bottom: 20px;
+    left: 40px;
+}
+
+.shape.shape-4 {
+    left: 20px;
+    top: 40px;
+    width: 20px;
+    height: 40px;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(90deg);
+    }
+}
+
+@keyframes spin1 {
+    25% {
+        transform: rotate(90deg) translate(30px, -10px) scaleX(1);
+    }
+    100% {
+        transform: rotate(90deg) translate(30px, -10px) scaleX(2);
+    }
+}
+
+@keyframes spin2 {
+    15% {
+        transform: rotate(0deg) translate(0px) scaleY(1);
+    }
+    50% {
+        transform: rotate(90deg) translate(10px, 30px) scaleY(2);
+    }
+}
+
+@keyframes spin3 {
+    40% {
+        transform: rotate(0deg) translate(0px) scaleX(1);
+    }
+    70% {
+        transform: rotate(90deg) translate(-30px, 10px) scaleX(1);
+    }
+    100% {
+        transform: rotate(90deg) translate(-30px, 10px) scaleX(2);
+    }
+}
+
+@keyframes spin4 {
+    65% {
+        transform: rotate(0deg) translate(0px) scaleY(1);
+    }
+    100% {
+        transform: rotate(90deg) translate(-10px, -30px) scaleY(2);
     }
 }

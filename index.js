@@ -44,7 +44,7 @@ function keyUp(event) {
             animationEight()
             break
         case 9:
-            // animationNine()
+            animationNine()
             break
         default:
             break
@@ -69,10 +69,21 @@ function animationZero() {
     }, 1200)
 }
 
+let timeoutId0 = 0;
+
 function playAudioZero() {
     var x = document.getElementById("audioZero");
-    x.currentTime = 0;
+    if (timeoutId0 > 0) {
+        x.pause();
+        clearTimeout(timeoutId0);
+    }
+
+    x.currentTime = 0.20;
     x.play();
+
+    timeoutId0 = setTimeout(() => {
+        x.pause();
+    }, 1200);
 }
 
 function animationOne() {
@@ -85,14 +96,21 @@ function animationOne() {
     }, 2000)
 }
 
-function playAudioOne(){
+let timeoutId1 = 0;
+
+function playAudioOne() {
     var x = document.getElementById("audioOne")
+    if (timeoutId1 > 0) {
+        x.pause();
+        clearTimeout(timeoutId1);
+    }
+
     x.currentTime = 3;
     x.play();
 
-    setTimeout(() =>{
-        x.pause()
-    }, 2200)
+    timeoutId1 = setTimeout(() => {
+        x.pause();
+    }, 2200);
 }
 
 function animationTwo() {
@@ -106,7 +124,6 @@ function animationTwo() {
 }
 
 function animationThree() {
-
 
     let div = document.createElement('div')
     div.classList.add('animationThree')
@@ -134,21 +151,21 @@ function animationThree() {
 
 }
 
-let timeoutId = 0;
+let timeoutId3 = 0;
 
-function playAudioThree(){
+function playAudioThree() {
     let x = document.getElementById("audioThree");
 
-    if (timeoutId > 0) {
+    if (timeoutId3 > 0) {
         x.pause();
-        clearTimeout(timeoutId);
+        clearTimeout(timeoutId3);
     }
 
     x.currentTime = 0;
     x.volume = 0.5;
     x.play();
 
-    timeoutId = setTimeout(() =>{
+    timeoutId3 = setTimeout(() => {
         x.pause();
     }, 2000);
 }
@@ -187,13 +204,23 @@ function animationFive() {
 
 }
 
-function playAudioFive(){
+
+let timeoutId5 = 0;
+
+function playAudioFive() {
     var x = document.getElementById("audioFive")
+
+    if (timeoutId5 > 0) {
+        x.pause();
+        clearTimeout(timeoutId5);
+    }
+
+    x.currentTime = 0;
     x.play();
 
-    setTimeout(() =>{
-        x.pause()
-    }, 3000)
+    timeoutId5 = setTimeout(() => {
+        x.pause();
+    }, 3000);
 }
 
 function animationSix() {
@@ -217,18 +244,25 @@ function animationSix() {
     }, 3000)
 }
 
-function playAudioSix(){
+let timeoutId6 = 0;
+
+function playAudioSix() {
     var x = document.getElementById("audioSix")
+    if (timeoutId6 > 0) {
+        x.pause();
+        clearTimeout(timeoutId6);
+    }
+
     x.currentTime = 0;
     x.play();
 
-    setTimeout(() =>{
-        x.pause()
-    }, 3000)
+    timeoutId6 = setTimeout(() => {
+        x.pause();
+    }, 3000);
 }
 
 
-function animationSeven(){
+function animationSeven() {
     let div = document.createElement("div")
     div.classList.add("animationSeven")
     wrapper.appendChild(div)
@@ -242,7 +276,7 @@ function animationSeven(){
     }, 3000)
 }
 
-function animationEight(){
+function animationEight() {
     let div = document.createElement("div")
     div.classList.add("animationEight")
     wrapper.appendChild(div)
@@ -256,14 +290,38 @@ function animationEight(){
     }, 5000)
 }
 
-function playAudioEight(){
+let timeoutId8 = 0;
+
+function playAudioEight() {
     var x = document.getElementById("audioEight")
+    if (timeoutId8 > 0) {
+        x.pause();
+        clearTimeout(timeoutId8);
+    }
+
     x.currentTime = 0;
     x.play();
 
-    setTimeout(() =>{
-        x.pause()
-    }, 5000)
+    timeoutId8 = setTimeout(() => {
+        x.pause();
+    }, 5000);
+}
+
+function animationNine() {
+    let div1 = document.createElement("div");
+    div1.classList.add("animationNine")
+    wrapper.append(div1)
+
+    let div2 = document.createElement("div");
+    div2.classList.add("loading")
+    div1.append(div2)
+
+    for (let i = 1; i < 5; i++) {
+        let shapes = document.createElement("span");
+        shapes.classList.add("shape");
+        shapes.classList.add("shape-" + i);
+        div2.append(shapes)
+    }
 }
 
 startUp()
