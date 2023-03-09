@@ -38,7 +38,7 @@ function keyUp(event) {
             animationEight()
             break
         case 9:
-            animationNine()
+            // animationNine()
             break
         default:
             break
@@ -59,7 +59,7 @@ function animationZero() {
     }, 800)
 
     setTimeout(() => {
-        div.classList.remove('animationZero')
+        div.remove();
     }, 1200)
 }
 
@@ -69,7 +69,7 @@ function animationOne() {
     wrapper.append(div)
 
     setTimeout(() => {
-        div.classList.remove('animationOne')
+        div.remove();
     }, 2000)
 }
 
@@ -79,12 +79,12 @@ function animationTwo() {
     wrapper.append(div)
 
     setTimeout(() => {
-        div.classList.remove('animationTwo')
+        div.remove();
     }, 2000)
 }
 
 function animationThree() {
-    // body.style.backgroundColor = "#191918";
+
 
     let div = document.createElement('div')
     div.classList.add('animationThree')
@@ -107,7 +107,7 @@ function animationThree() {
     div4.append(div5)
 
     setTimeout(() => {
-        div.classList.remove('animationThree', 'face', 'circle')
+        div.remove();
     }, 2000)
 
 }
@@ -118,8 +118,32 @@ function animationFour() {
     wrapper.append(div)
 
     setTimeout(() => {
-        div.classList.remove('animationFour')
+        div.remove();
     }, 3000)
+}
+
+function animationFive() {
+    let animationFive = document.createElement("div");
+    animationFive.classList.add("animationFive")
+    wrapper.append(animationFive);
+
+
+    for (let i = 0; i < 3; i++) {
+        let circleFive = document.createElement("div");
+        circleFive.classList.add("circleFive");
+        animationFive.append(circleFive);
+    }
+
+    for (let j = 0; j < 3; j++) {
+        let shadow_div = document.createElement("div");
+        shadow_div.classList.add("shadow_div");
+        animationFive.append(shadow_div);
+    }
+
+    setTimeout(() => {
+        animationFive.remove();
+    }, 3000)
+
 }
 
 startUp()
