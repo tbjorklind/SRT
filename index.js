@@ -146,4 +146,27 @@ function animationFive() {
 
 }
 
+function animationSix(){
+    let div = document.createElement("div");
+    div.classList.add("animationSix")
+    wrapper.append(div)
+
+    let div2 = document.createElement("div")
+    div2.classList.add("circleSix");
+    div.appendChild(div2)
+
+    let counter = 0;
+
+    setInterval(() =>{
+        div2.style.left = counter + "px";
+        counter += 100
+    }, 150)
+
+    setTimeout(() => {
+        div.remove();
+    }, 3000)
+
+    
+}
+
 startUp()
