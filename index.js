@@ -12,6 +12,7 @@ function keyUp(event) {
     switch (pressedNr) {
         case 0:
             animationZero()
+            playAudioZero()
             break
         case 1:
             animationOne()
@@ -61,6 +62,11 @@ function animationZero() {
     setTimeout(() => {
         div.remove();
     }, 1200)
+}
+
+function playAudioZero() {
+    var x = document.getElementById("audioZero");
+    x.play();
 }
 
 function animationOne() {
@@ -146,7 +152,7 @@ function animationFive() {
 
 }
 
-function animationSix(){
+function animationSix() {
     let div = document.createElement("div");
     div.classList.add("animationSix")
     wrapper.append(div)
@@ -157,7 +163,7 @@ function animationSix(){
 
     let counter = 0;
 
-    setInterval(() =>{
+    setInterval(() => {
         div2.style.left = counter + "px";
         counter += 100
     }, 150)
@@ -166,7 +172,7 @@ function animationSix(){
         div.remove();
     }, 3000)
 
-    
+
 }
 
 startUp()
