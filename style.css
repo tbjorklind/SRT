@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    background-color: rgb(66, 66, 66);
 }
 
 .wrapper {
@@ -161,7 +162,7 @@ body {
 .animationFour::after {
     content: "";
     position: absolute;
-    background: #2b2a2a;
+    background: #ffe2e2;
     top: 50%;
     width: 40px;
     left: -15px;
@@ -328,5 +329,104 @@ body {
     }
     100%{
         transform: scale(1,1) translateY(0);
+    }
+}
+
+.animationSeven{
+    padding: 0;
+    margin: 0;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+}
+
+.boxSeven{
+    position: relative;
+    width: 700px;
+    height: 700px;
+    border-radius: 20px;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+
+.boxSeven::before{
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: conic-gradient(transparent, transparent, transparent, #00ffad);
+    animation: rotate 1s linear infinite;
+   
+}
+
+.boxSeven::after{
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    animation: rotate 1s linear infinite;
+    animation-delay: -0.5s;
+    background: conic-gradient(transparent, transparent, transparent, #00adb5);
+}
+
+@keyframes rotate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.animationEight{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.box8{
+    position: absolute;
+    animation: eight 2s infinite alternate linear;
+
+}
+
+@keyframes eight{
+    0%{
+        background-color: #ee6055;
+        left: 0%;
+        top: 0%;
+        width: 10vw;
+        height: 10vh;
+    }
+    25%{
+        background-color: #eec355;
+        left: 25%;
+        top: 25%;
+        width: 20vw;
+        height: 20vh;
+    }
+    50%{
+        background-color: #8afe76;
+        left: 50%;
+        top: 50%;
+        width: 40vw;
+        height: 40vh;
+    }
+    75%{
+        background-color: #55d2ee;
+        left: 75%;
+        top: 75%;
+        width: 60vw;
+        height: 60vh;
+    }
+    100%{
+        background-color: #ee55ee;
+        left: 100%;
+        top: 100%;
+        width: 80vw;
+        height: 80vh;
+
     }
 }

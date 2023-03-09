@@ -23,6 +23,7 @@ function keyUp(event) {
             break
         case 3:
             animationThree()
+            playAudioThree()
             break
         case 4:
             animationFour()
@@ -39,6 +40,7 @@ function keyUp(event) {
             animationSeven()
             break
         case 8:
+            playAudioEight()
             animationEight()
             break
         case 9:
@@ -69,6 +71,7 @@ function animationZero() {
 
 function playAudioZero() {
     var x = document.getElementById("audioZero");
+    x.currentTime = 0;
     x.play();
 }
 
@@ -84,6 +87,7 @@ function animationOne() {
 
 function playAudioOne(){
     var x = document.getElementById("audioOne")
+    x.currentTime = 3;
     x.play();
 
     setTimeout(() =>{
@@ -128,6 +132,25 @@ function animationThree() {
         div.remove();
     }, 2000)
 
+}
+
+let timeoutId = 0;
+
+function playAudioThree(){
+    let x = document.getElementById("audioThree");
+
+    if (timeoutId > 0) {
+        x.pause();
+        clearTimeout(timeoutId);
+    }
+
+    x.currentTime = 0;
+    x.volume = 0.5;
+    x.play();
+
+    timeoutId = setTimeout(() =>{
+        x.pause();
+    }, 2000);
 }
 
 function animationFour() {
@@ -196,6 +219,7 @@ function animationSix() {
 
 function playAudioSix(){
     var x = document.getElementById("audioSix")
+    x.currentTime = 0;
     x.play();
 
     setTimeout(() =>{
@@ -203,5 +227,43 @@ function playAudioSix(){
     }, 3000)
 }
 
+
+function animationSeven(){
+    let div = document.createElement("div")
+    div.classList.add("animationSeven")
+    wrapper.appendChild(div)
+
+    let div2 = document.createElement("div")
+    div2.classList.add("boxSeven")
+    div.append(div2)
+
+    setTimeout(() => {
+        div.remove();
+    }, 3000)
+}
+
+function animationEight(){
+    let div = document.createElement("div")
+    div.classList.add("animationEight")
+    wrapper.appendChild(div)
+
+    let div2 = document.createElement("div")
+    div2.classList.add("box8")
+    div.append(div2)
+
+    setTimeout(() => {
+        div.remove();
+    }, 5000)
+}
+
+function playAudioEight(){
+    var x = document.getElementById("audioEight")
+    x.currentTime = 0;
+    x.play();
+
+    setTimeout(() =>{
+        x.pause()
+    }, 5000)
+}
 
 startUp()
