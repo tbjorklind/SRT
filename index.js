@@ -27,6 +27,7 @@ function keyUp(event) {
             break
         case 4:
             animationFour()
+            playAudioFour()
             break
         case 5:
             animationFive()
@@ -38,6 +39,7 @@ function keyUp(event) {
             break
         case 7:
             animationSeven()
+            playAudioSeven()
             break
         case 8:
             playAudioEight()
@@ -45,6 +47,7 @@ function keyUp(event) {
             break
         case 9:
             animationNine()
+            playAudioNine()
             break
         default:
             break
@@ -180,6 +183,24 @@ function animationFour() {
     }, 3000)
 }
 
+let timeoutId4 = 0;
+
+function playAudioFour() {
+    var x = document.getElementById("audioFour")
+
+    if (timeoutId4 > 0) {
+        x.pause();
+        clearTimeout(timeoutId4);
+    }
+
+    x.currentTime = 0;
+    x.play();
+
+    timeoutId4 = setTimeout(() => {
+        x.pause();
+    }, 3000);
+}
+
 function animationFive() {
     let animationFive = document.createElement("div");
     animationFive.classList.add("animationFive")
@@ -276,6 +297,26 @@ function animationSeven() {
     }, 3000)
 }
 
+let timeoutId7 = 0;
+
+function playAudioSeven() {
+
+    var x = document.getElementById("audioSeven")
+    if (timeoutId7 > 0) {
+        x.pause();
+        clearTimeout(timeoutId7);
+    }
+
+    x.currentTime = 0;
+    x.play();
+
+    timeoutId7 = setTimeout(() => {
+        x.pause();
+    }, 3000);
+}
+
+
+
 function animationEight() {
     let div = document.createElement("div")
     div.classList.add("animationEight")
@@ -322,6 +363,23 @@ function animationNine() {
         shapes.classList.add("shape-" + i);
         div2.append(shapes)
     }
+}
+
+let timeoutId9 = 0;
+
+function playAudioNine() {
+    var x = document.getElementById("audioNine")
+    if (timeoutId9 > 0) {
+        x.pause();
+        clearTimeout(timeoutId9);
+    }
+
+    x.currentTime = 0;
+    x.play();
+
+    timeoutId9 = setTimeout(() => {
+        x.pause();
+    }, 3000);
 }
 
 startUp()
