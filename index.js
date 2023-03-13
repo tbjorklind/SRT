@@ -380,10 +380,10 @@ function playAudioEight() {
 
 function animationNine() {
     let colors = [
-        '--clr:#04fc43;',
-        '--clr:#fcfc04;',
-        '--clr:#e704fc;',
-        '--clr:#04d7fc;'
+        '--clr:#da9ada;',
+        '--clr:#ecca75;',
+        '--clr:#eb7c74;',
+        '--clr:rgb(62, 183, 223);'
     ]
 
     let divBox = document.createElement("div")
