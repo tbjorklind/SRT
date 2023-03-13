@@ -233,6 +233,8 @@ function playAudioFour() {
 
 function animationFive() {
     let animationFive = document.createElement("div");
+    animationFive.style.top = Math.floor(Math.random() * 80) + "vh";
+    animationFive.style.left = Math.floor(Math.random() * 80) + "vw";
     animationFive.classList.add("animationFive")
     wrapper.append(animationFive);
 
