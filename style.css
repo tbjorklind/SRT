@@ -405,7 +405,7 @@ body {
     width: 500px;
     height: 500px;
     background: conic-gradient(transparent, transparent, transparent, #77d7a6);
-    animation: rotate 1s linear infinite;
+    animation: rotate 0.4s linear infinite;
 }
 
 .boxSeven::after {
@@ -413,8 +413,8 @@ body {
     position: absolute;
     width: 500px;
     height: 500px;
-    animation: rotate 1s linear infinite;
-    animation-delay: -0.5s;
+    animation: rotate 0.4s linear infinite;
+    animation-delay: -0.2s;
     background: conic-gradient(transparent, transparent, transparent, #c786d4);
 }
 

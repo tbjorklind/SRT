@@ -324,7 +324,7 @@ function animationSeven() {
 
     setTimeout(() => {
         div.remove();
-    }, 3000)
+    }, 2000)
 }
 
 let timeoutId7 = 0;
@@ -342,7 +342,7 @@ function playAudioSeven() {
 
     timeoutId7 = setTimeout(() => {
         x.pause();
-    }, 3000);
+    }, 2000);
 }
 
 
