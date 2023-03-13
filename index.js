@@ -378,38 +378,44 @@ function playAudioEight() {
     }, 5000);
 }
 
-function animationNine() {
-    let div1 = document.createElement("div");
-    div1.classList.add("animationNine")
-    wrapper.append(div1)
-
-    let div2 = document.createElement("div");
-    div2.classList.add("loading")
-    div1.append(div2)
-
-    for (let i = 1; i < 5; i++) {
-        let shapes = document.createElement("span");
-        shapes.classList.add("shape");
-        shapes.classList.add("shape-" + i);
-        div2.append(shapes)
+function animationNine () {
+    let colors = [
+      '--clr:#04fc43;',
+      '--clr:#fcfc04;',
+      '--clr:#e704fc;',
+      '--clr:#04d7fc;'
+    ]
+  
+    let divBox = document.createElement("div")
+    wrapper.append(divBox)
+  
+    for (let i = 0; i <= 4; i++) {
+      let div = document.createElement('div')
+      div.classList.add('circle')
+      div.style = colors[i]
+      divBox.append(div)
     }
-}
-
-let timeoutId9 = 0;
-
-function playAudioNine() {
-    var x = document.getElementById("audioNine")
+  
+    setTimeout(() => {
+      divBox.remove()
+    }, 3000)
+  }
+  
+  let timeoutId9 = 0
+  
+  function playAudioNine () {
+    var x = document.getElementById('audioNine')
     if (timeoutId9 > 0) {
-        x.pause();
-        clearTimeout(timeoutId9);
+      x.pause()
+      clearTimeout(timeoutId9)
     }
-
-    x.currentTime = 0;
-    x.play();
-
+  
+    x.currentTime = 0
+    x.play()
+  
     timeoutId9 = setTimeout(() => {
-        x.pause();
-    }, 3000);
-}
+      x.pause()
+    }, 3000)
+  }
 
 startUp()
