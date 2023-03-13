@@ -1,6 +1,7 @@
 body {
     margin: 0;
     background-color: rgb(66, 66, 66);
+    overflow: hidden;
 }
 
 .wrapper {
@@ -438,6 +439,7 @@ body {
     width: 100vw;
     height: 100vh;
     position: relative;
+    overflow: hidden;
 }
 
 .box8 {
