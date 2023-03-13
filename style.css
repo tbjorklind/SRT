@@ -42,6 +42,7 @@ body {
     --r2: 68.5%;
     width: 100vw;
     height: 100vh;
+    position: absolute;
     background: radial-gradient( var(--r1) var(--r2) at top, #0000 79.5%, #a4c6e0 80%), radial-gradient(var(--r1) var(--r2) at bottom, #a4c6e0 79.5%, #0000 80%), radial-gradient(var(--r1) var(--r2) at top, #0000 79.5%, #a4c6e0 80%);
     background-size: 50.5% 220%;
     background-position: -100% 0%, 0% 0%, 100% 0%;
@@ -245,7 +246,7 @@ body {
     height: 70px;
     position: absolute;
     border-radius: 50%;
-    background-color: #154E61;
+    background-color: #2bbc98;
     left: 15%;
     transform-origin: 50%;
     animation: circle7124 .5s alternate infinite ease;
