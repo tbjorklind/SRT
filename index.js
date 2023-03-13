@@ -20,6 +20,7 @@ function keyUp(event) {
             break
         case 2:
             animationTwo()
+            playAudioTwo()
             break
         case 3:
             animationThree()
@@ -117,13 +118,42 @@ function playAudioOne() {
 }
 
 function animationTwo() {
-    let div = document.createElement('div')
-    div.classList.add('animationTwo')
-    wrapper.append(div)
+    for(let i = 0; i < 3; i++){
+        let div1 = document.createElement("div");
+        div1.classList.add("animation2")
+        div1.style.top = Math.floor(Math.random() * 80) + "vh";
+        div1.style.left = Math.floor(Math.random() * 60) + "vw";
+        wrapper.append(div1)
+    
+        for(let j = 0; j < 8; j++){
+            let circle = document.createElement("div")
+            circle.classList.add("circle-animation2")
+            div1.appendChild(circle);
+            circle.style.left = `${(j + 1 - 1) * 30}px`;
+            circle.style.animationDelay = (j + 1 - 1) * .1 + "s";
+        }
+        setTimeout(() => {
+            div1.remove();
+        }, 2000)
+    }
+}
 
-    setTimeout(() => {
-        div.remove();
-    }, 2000)
+
+let timeoutId2 = 0;
+
+function playAudioTwo() {
+    var x = document.getElementById("audioTwo")
+    if (timeoutId2 > 0) {
+        x.pause();
+        clearTimeout(timeoutId2);
+    }
+
+    x.currentTime = 0;
+    x.play();
+
+    timeoutId2 = setTimeout(() => {
+        x.pause();
+    }, 2000);
 }
 
 function animationThree() {
