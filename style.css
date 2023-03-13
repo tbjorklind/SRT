@@ -9,7 +9,14 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
+
+
+/* ----------------------------------- */
+
+
+/* Animation 0 */
 
 .animationZero {
     height: 100px;
@@ -23,6 +30,12 @@ body {
     width: 100vh;
     height: 100vh;
 }
+
+
+/* ----------------------------------- */
+
+
+/* Animation 1 */
 
 .animationOne {
     --r1: 154%;
@@ -48,12 +61,18 @@ body {
     }
 }
 
-.animation2{
+
+/* ----------------------------------- */
+
+
+/* Animation 2 */
+
+.animation2 {
     position: absolute;
-    display: flex;    
+    display: flex;
 }
 
-.circle-animation2{
+.circle-animation2 {
     position: relative;
     width: 20px;
     height: 20px;
@@ -65,15 +84,21 @@ body {
 
 @keyframes move-the-circle {
     0% {
-      transform: translate(0, 0);
+        transform: translate(0, 0);
     }
     50% {
-      transform: translate(0, 150px);
+        transform: translate(0, 150px);
     }
     100% {
-      transform: translate(0, 0);
+        transform: translate(0, 0);
     }
-  }
+}
+
+
+/* ----------------------------------- */
+
+
+/* Animation 3 */
 
 .animationThree {
     width: 50em;
@@ -141,6 +166,12 @@ body {
     }
 }
 
+
+/* ----------------------------------- */
+
+
+/* Animation 4 */
+
 .animationFour {
     position: relative;
     width: 200px;
@@ -195,6 +226,12 @@ body {
         transform: rotate(50deg);
     }
 }
+
+
+/* ----------------------------------- */
+
+
+/* Animation 5 */
 
 .animationFive {
     width: 500px;
@@ -282,6 +319,12 @@ body {
     animation-delay: .3s;
 }
 
+
+/* ----------------------------------- */
+
+
+/* Animation 6 */
+
 .animationSix {
     width: 100vw;
     height: 100vh;
@@ -332,6 +375,12 @@ body {
     }
 }
 
+
+/* ----------------------------------- */
+
+
+/* Animation 7 */
+
 .animationSeven {
     padding: 0;
     margin: 0;
@@ -377,6 +426,12 @@ body {
         transform: rotate(360deg);
     }
 }
+
+
+/* ----------------------------------- */
+
+
+/* Animation 8 */
 
 .animationEight {
     position: absolute;
@@ -428,118 +483,13 @@ body {
     }
 }
 
-.loading {
-    width: 120px;
-    height: 120px;
-    position: relative;
-    margin: 150px auto;
-    background-color: white;
-    animation: spin 2s linear infinite;
-    animation-direction: reverse;
-}
 
-.shape {
-    display: block;
-    position: absolute;
-    height: 20px;
-    width: 40px;
-    background-color: white;
-    mix-blend-mode: exclusion;
-    -webkit-backface-visibility: visible;
-    backface-visibility: visible;
-}
+/* ----------------------------------- */
 
-.shape.shape-1 {
-    animation: spin1 2s ease-in-out infinite;
-    animation-fill-mode: forwards;
-}
 
-.shape.shape-2 {
-    animation: spin2 2s ease-in-out infinite;
-    animation-fill-mode: forwards;
-}
+/* Animation 9 */
 
-.shape.shape-3 {
-    animation: spin3 2s ease-in-out infinite;
-    animation-fill-mode: forwards;
-}
-
-.shape.shape-4 {
-    animation: spin4 2s ease-in-out infinite;
-    animation-fill-mode: forwards;
-}
-
-.shape.shape-1 {
-    top: 20px;
-    left: 40px;
-}
-
-.shape.shape-2 {
-    right: 20px;
-    top: 40px;
-    width: 20px;
-    height: 40px;
-}
-
-.shape.shape-3 {
-    bottom: 20px;
-    left: 40px;
-}
-
-.shape.shape-4 {
-    left: 20px;
-    top: 40px;
-    width: 20px;
-    height: 40px;
-}
-
-@keyframes spin {
-    100% {
-        transform: rotate(90deg);
-    }
-}
-
-@keyframes spin1 {
-    25% {
-        transform: rotate(90deg) translate(30px, -10px) scaleX(1);
-    }
-    100% {
-        transform: rotate(90deg) translate(30px, -10px) scaleX(2);
-    }
-}
-
-@keyframes spin2 {
-    15% {
-        transform: rotate(0deg) translate(0px) scaleY(1);
-    }
-    50% {
-        transform: rotate(90deg) translate(10px, 30px) scaleY(2);
-    }
-}
-
-@keyframes spin3 {
-    40% {
-        transform: rotate(0deg) translate(0px) scaleX(1);
-    }
-    70% {
-        transform: rotate(90deg) translate(-30px, 10px) scaleX(1);
-    }
-    100% {
-        transform: rotate(90deg) translate(-30px, 10px) scaleX(2);
-    }
-}
-
-@keyframes spin4 {
-    65% {
-        transform: rotate(0deg) translate(0px) scaleY(1);
-    }
-    100% {
-        transform: rotate(90deg) translate(-10px, -30px) scaleY(2);
-    }
-}
-
-/* Animation nine */
-.circle {
+.circleNine {
     position: absolute;
     width: 100px;
     height: 100px;
@@ -547,27 +497,27 @@ body {
     justify-content: center;
     align-items: center;
     animation: animate 15s linear infinite, particles 4s ease-in-out infinite;
-  }
-  
-  .circle:nth-child(2) {
+}
+
+.circleNine:nth-child(2) {
     width: 50px;
     height: 50px;
     animation: animate 10s linear infinite, particles 7s ease-in-out infinite;
-  }
-  
-  .circle:nth-child(4) {
+}
+
+.circleNine:nth-child(4) {
     width: 80px;
     height: 80px;
     animation: animate 7s linear infinite, particles 10s ease-in-out infinite;
-  }
-  
-  .circle:nth-child(3) {
+}
+
+.circleNine:nth-child(3) {
     width: 100px;
     height: 100px;
     animation: animate 5s linear infinite, particles 6s ease-in-out infinite;
-  }
-  
-  .circle::before {
+}
+
+.circleNine::before {
     content: '';
     position: absolute;
     top: 0px;
@@ -576,30 +526,28 @@ body {
     height: 15px;
     background: var(--clr);
     border-radius: 50%;
-    box-shadow: 0 0 20px var(--clr), 0 0 60px var(--clr),
-      40px -70px 0px var(--clr), 40px -70px 20px var(--clr),
-      70px -70px 0 var(--clr), 70px -70px 20px var(--clr),
-      -70px -150px 0px var(--clr), -70px -150px 20px var(--clr);
+    box-shadow: 0 0 20px var(--clr), 0 0 60px var(--clr), 40px -70px 0px var(--clr), 40px -70px 20px var(--clr), 70px -70px 0 var(--clr), 70px -70px 20px var(--clr), -70px -150px 0px var(--clr), -70px -150px 20px var(--clr);
     animation: animate 10s linear infinite;
-  }
-  
-  @keyframes animate {
+}
+
+@keyframes animate {
     0% {
-      transform: rotate(0deg);
+        transform: rotate(0deg);
     }
     100% {
-      transform: rotate(360deg);
+        transform: rotate(360deg);
     }
-  }
-  @keyframes particles {
+}
+
+@keyframes particles {
     0%,
     100% {
-      scale: 0.5;
+        scale: 0.5;
     }
     50% {
-      scale: 1.25;
+        scale: 1.25;
     }
-  }
+}
 
-  /* ----------------------------------- */
 
+/* ----------------------------------- */

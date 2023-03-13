@@ -118,14 +118,14 @@ function playAudioOne() {
 }
 
 function animationTwo() {
-    for(let i = 0; i < 3; i++){
+    for (let i = 0; i < 3; i++) {
         let div1 = document.createElement("div");
         div1.classList.add("animation2")
         div1.style.top = Math.floor(Math.random() * 80) + "vh";
         div1.style.left = Math.floor(Math.random() * 60) + "vw";
         wrapper.append(div1)
-    
-        for(let j = 0; j < 8; j++){
+
+        for (let j = 0; j < 8; j++) {
             let circle = document.createElement("div")
             circle.classList.add("circle-animation2")
             div1.appendChild(circle);
@@ -378,44 +378,44 @@ function playAudioEight() {
     }, 5000);
 }
 
-function animationNine () {
+function animationNine() {
     let colors = [
-      '--clr:#04fc43;',
-      '--clr:#fcfc04;',
-      '--clr:#e704fc;',
-      '--clr:#04d7fc;'
+        '--clr:#04fc43;',
+        '--clr:#fcfc04;',
+        '--clr:#e704fc;',
+        '--clr:#04d7fc;'
     ]
-  
+
     let divBox = document.createElement("div")
     wrapper.append(divBox)
-  
+
     for (let i = 0; i <= 4; i++) {
-      let div = document.createElement('div')
-      div.classList.add('circle')
-      div.style = colors[i]
-      divBox.append(div)
+        let div = document.createElement('div')
+        div.classList.add('circleNine')
+        div.style = colors[i]
+        divBox.append(div)
     }
-  
+
     setTimeout(() => {
-      divBox.remove()
+        divBox.remove()
     }, 3000)
-  }
-  
-  let timeoutId9 = 0
-  
-  function playAudioNine () {
+}
+
+let timeoutId9 = 0
+
+function playAudioNine() {
     var x = document.getElementById('audioNine')
     if (timeoutId9 > 0) {
-      x.pause()
-      clearTimeout(timeoutId9)
+        x.pause()
+        clearTimeout(timeoutId9)
     }
-  
+
     x.currentTime = 0
     x.play()
-  
+
     timeoutId9 = setTimeout(() => {
-      x.pause()
+        x.pause()
     }, 3000)
-  }
+}
 
 startUp()
